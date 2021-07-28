@@ -1,6 +1,4 @@
 import {useEffect, useState} from "react";
-import styled from 'styled-components';
-import colors from '../styles/colors';
 import { LaunchDetail } from "../styles/layout";
 import { SmallButton } from "../styles/buttons";
 import droneShip from '../icons/Droneship-Icon.svg';
@@ -22,7 +20,7 @@ const Ship = ({ shipId }) => {
         .catch((error) => {
             console.log(error);
         })
-    }, [shipId]);
+    }, [shipId, url]);
 
     return (
         <div>

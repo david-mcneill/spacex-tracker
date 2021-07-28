@@ -1,13 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import Rocket from './Rocket';
-import Ship from './Ship';
 import { format } from 'date-fns';
 import styled from 'styled-components';
 import colors from '../styles/colors';
 import * as T from '../styles/type';
 import * as B from '../styles/buttons';
-import falcon9 from '../icons/Falcon-9-Icon.svg';
-import droneShip from '../icons/Droneship-Icon.svg';
 
 const LatestLaunch = () => {
     const [launchData, setLaunchData] = useState(null);
@@ -61,7 +58,6 @@ const LatestLaunch = () => {
                         <LatestLaunchDetails>
                             <T.launchBlockTitle style={{ fontSize: 18, marginBottom: '32px' }}>Launch Details</T.launchBlockTitle>
                             <Rocket rocketId={launchData.rocket} />
-                            {/* <Ship shipId={launchData.ships[0]} /> */}
                         </LatestLaunchDetails>
                     </LatestLaunchBody>
                 </div>

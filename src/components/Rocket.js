@@ -1,6 +1,4 @@
 import {useEffect, useState} from "react";
-import styled from 'styled-components';
-import colors from '../styles/colors';
 import { LaunchDetail } from "../styles/layout";
 import { SmallButton } from "../styles/buttons";
 import falcon9 from '../icons/Falcon-9-Icon.svg';
@@ -22,7 +20,7 @@ const Rocket = ({ rocketId }) => {
         .catch((error) => {
             console.log(error);
         })
-    }, [rocketId]);
+    }, [rocketId, url]);
 
     return (
         <div>
