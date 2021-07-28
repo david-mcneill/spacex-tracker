@@ -1,8 +1,13 @@
 import React, { useState, useEffect } from 'react';
+import Rocket from './Rocket';
+import Ship from './Ship';
 import { format } from 'date-fns';
 import styled from 'styled-components';
 import colors from '../styles/colors';
 import * as T from '../styles/type';
+import * as B from '../styles/buttons';
+import falcon9 from '../icons/Falcon-9-Icon.svg';
+import droneShip from '../icons/Droneship-Icon.svg';
 
 const LatestLaunch = () => {
     const [launchData, setLaunchData] = useState(null);
@@ -49,7 +54,15 @@ const LatestLaunch = () => {
                     </LatestLaunchHeader>
 
                     <LatestLaunchBody>
-                        <T.launchDetails>{launchData.details}</T.launchDetails>
+                        <T.launchDescription>{launchData.details}</T.launchDescription>
+                        <div style={{ padding: '24px 0', textAlign: 'center' }}>
+                            <B.Button href={launchData.links.webcast} target="_blank" rel="nofollower">Watch the launch</B.Button>
+                        </div>
+                        <LatestLaunchDetails>
+                            <T.launchBlockTitle style={{ fontSize: 18, marginBottom: '32px' }}>Launch Details</T.launchBlockTitle>
+                            <Rocket rocketId={launchData.rocket} />
+                            {/* <Ship shipId={launchData.ships[0]} /> */}
+                        </LatestLaunchDetails>
                     </LatestLaunchBody>
                 </div>
             }
@@ -97,4 +110,11 @@ export const LatestLaunchPatch = styled.div`
 
 export const LatestLaunchBody = styled.div`
     padding: 32px;
+`;
+
+export const LatestLaunchDetails = styled.div`
+    padding: 24px;
+    background: #303640;
+    box-shadow: inset 0px 0px 16px 8px rgba(39, 43, 51, 0.5);
+    border-radius: 6px;
 `;

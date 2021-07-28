@@ -46,7 +46,7 @@ export const launchName = styled.h2`
     margin: 0;
 `;
 
-export const launchDetails = styled.p`
+export const launchDescription = styled.p`
     font-family: 'Inter Regular';
     font-style: normal;
     font-weight: normal;

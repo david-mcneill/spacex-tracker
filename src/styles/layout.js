@@ -15,20 +15,26 @@ export const Grid = styled.div`
   grid-gap: 12px;
 `
 
-export const LaunchSection = styled.section`
-  margin-bottom: 48px;
-  padding-bottom: 48px;
-
-  .launch-section-header {
-    background-color: ${colors.dark};
-    padding: 18px;
-
-    h2 {
-      margin: 0;
-      color: ${colors.light};
-      font-size: 1.125em;
-      font-weight: 300;
-      text-transform: uppercase;
-    }
+export const LaunchDetail = styled.div`
+  color: ${colors.nepal};
+  margin-bottom: 18px;
+  
+  .LaunchDetailTitle {
+    font-family: 'Inter Bold';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 24px;
+    text-transform: uppercase;
   }
-`
+
+  .LaunchDetailContent {
+    border: 2px solid ${colors.nepal};
+    border-radius: 3px;
+    padding: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+`;
+  

@@ -3,12 +3,12 @@ import styled from 'styled-components';
 import colors from '../styles/colors';
 import { LaunchDetail } from "../styles/layout";
 import { SmallButton } from "../styles/buttons";
-import falcon9 from '../icons/Falcon-9-Icon.svg';
+import droneShip from '../icons/Droneship-Icon.svg';
 
-const Rocket = ({ rocketId }) => {
-    const url = `https://api.spacexdata.com/v4/rockets/${rocketId}`;
+const Ship = ({ shipId }) => {
+    const url = `https://api.spacexdata.com/v4/ships/${shipId}`;
     const [loading, setLoading] = useState(true);
-    const [rocketData, setRocketData] = useState(null);
+    const [shipData, setShipData] = useState(null);
           
     useEffect(() => {
         fetch(url)
@@ -16,13 +16,13 @@ const Rocket = ({ rocketId }) => {
             return response.json();
         })
         .then((data) => {
-            setRocketData(data);
+            setShipData(data);
             setLoading(false);
         })
         .catch((error) => {
             console.log(error);
         })
-    }, [rocketId]);
+    }, [shipId]);
 
     return (
         <div>
@@ -30,11 +30,11 @@ const Rocket = ({ rocketId }) => {
                 <p>Loading data...</p>
                 :
                 <LaunchDetail>
-                    <span className="LaunchDetailTitle">Booster</span>
+                    <span className="LaunchDetailTitle">Recovery Vessel</span>
                     <div className="LaunchDetailContent">
-                        <img src={falcon9} alt="Icon of Falcon 9 booster" />
-                        <p>Name: {rocketData.name}</p>
-                        <p>Stages: {rocketData.stages}</p>
+                        <img src={droneShip} alt="Icon of a SpaceX Droneship" />
+                        <p>Name: {shipData.name}</p>
+                        <p>Type: {shipData.type}</p>
                         <SmallButton>View Details</SmallButton>
                     </div>
                 </LaunchDetail>
@@ -43,4 +43,4 @@ const Rocket = ({ rocketId }) => {
     );
 }
 
-export default Rocket;
+export default Ship;

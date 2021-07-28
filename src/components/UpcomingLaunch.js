@@ -52,7 +52,7 @@ const UpcomingLaunch = () => {
                     
                     <UpcomingLaunchBody>
                         {launchData.details &&
-                            <T.launchDetails>{launchData.details}</T.launchDetails>
+                            <T.launchDescription>{launchData.details}</T.launchDescription>
                         }
                     </UpcomingLaunchBody>
                 </div>
@@ -66,6 +66,7 @@ export default UpcomingLaunch;
 
 export const UpcomingLaunchContainer = styled.div`
     grid-column: 7 / span 6;
+    align-self: start;
     background: linear-gradient(139.98deg, #272B33 33.85%, #616B80 100%);
     box-shadow: 0px 0px 20px 8px rgba(0, 0, 0, 0.2);
     border-radius: 6px;
