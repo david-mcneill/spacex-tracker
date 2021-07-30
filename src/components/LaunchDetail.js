@@ -10,7 +10,7 @@ const LaunchDetail = ({type, data}) => {
         <LaunchDetailContainer>
             <LaunchDetailTitle>{type}</LaunchDetailTitle>
             <LaunchDetailContent>
-                <img src={type === 'rocket' ? falcon9 : droneShip} />
+                <img src={type === 'rocket' ? falcon9 : droneShip} alt={`Icon of a ${type}`} />
                 <SmallButton to={`/${type}/${data}`}>View Details</SmallButton>
             </LaunchDetailContent>
         </LaunchDetailContainer>
