@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import Rocket from './Rocket';
+import LaunchDetail from './LaunchDetail';
 import { format } from 'date-fns';
 import styled from 'styled-components';
 import colors from '../styles/colors';
@@ -57,7 +57,12 @@ const LatestLaunch = () => {
                         </div>
                         <LatestLaunchDetails>
                             <T.launchBlockTitle style={{ fontSize: 18, marginBottom: '32px' }}>Launch Details</T.launchBlockTitle>
-                            <Rocket rocketId={launchData.rocket} />
+                            {launchData.rocket &&
+                                <LaunchDetail type="rocket" data={launchData.rocket}></LaunchDetail>
+                            }
+                            {launchData.ships &&
+                                <LaunchDetail type="ship" data={launchData.ships[0]}></LaunchDetail>
+                            }
                         </LatestLaunchDetails>
                     </LatestLaunchBody>
                 </div>

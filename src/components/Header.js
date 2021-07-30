@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import colors from '../styles/colors';
 import logo from '../SpaceX-Logo.svg';
@@ -8,7 +9,9 @@ const Header = () => {
     <HeaderOuter>
       <HeaderContainer>
         <HeaderLogo>
-          <img src={logo} alt="" />
+          <Link to="/">
+            <img src={logo} alt="SpaceX Logo" />
+          </Link>
         </HeaderLogo>
 
         <HeaderTitle>Launch Tracker</HeaderTitle>

@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import colors from './colors';
+import { Link } from 'react-router-dom';
 
 export const Button = styled.a`
   display: inline-block;
@@ -15,7 +16,7 @@ export const Button = styled.a`
   text-transform: uppercase;
 `
 
-export const SmallButton = styled.a`
+export const SmallButton = styled(Link)`
   display: inline-block;
   background: ${colors.nepal};
   border-radius: 24px;
@@ -25,5 +26,6 @@ export const SmallButton = styled.a`
   font-weight: 500;
   font-size: 14px;
   text-transform: uppercase;
+  text-decoration: none;
   color: ${colors.tuna};
 `;
