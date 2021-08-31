@@ -119,6 +119,10 @@ export const LatestLaunchContainer = styled.div`
     box-shadow: 0px 0px 20px 8px rgba(0, 0, 0, 0.2);
     border-radius: 6px;
     color: ${colors.light};
+
+    @media screen and (max-width: 1024px) {
+        margin-bottom: 48px;
+    }
 `;
 
 export const LatestLaunchHeader = styled.div`
