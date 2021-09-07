@@ -5,6 +5,7 @@ import Footer from "./components/Footer";
 import Home from "./pages/Home";
 import Rocket from "./pages/Rocket";
 import Ship from "./pages/Ship";
+import Payload from "./pages/Payload";
 
 function App() {
     return (
@@ -19,6 +20,10 @@ function App() {
 
                         <Route path="/ship/:id">
                             <Ship />
+                        </Route>
+
+                        <Route path="/payloads/:id">
+                            <Payload />
                         </Route>
 
                         <Route path="/">

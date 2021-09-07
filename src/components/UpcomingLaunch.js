@@ -3,6 +3,7 @@ import { format } from "date-fns";
 import styled from "styled-components";
 import colors from "../styles/colors";
 import * as T from "../styles/type";
+import Loading from "./Loading";
 
 const UpcomingLaunch = () => {
     const [launchData, setLaunchData] = useState(null);
@@ -27,7 +28,7 @@ const UpcomingLaunch = () => {
     return (
         <UpcomingLaunchContainer>
             {loading ? (
-                <h3>Loading...</h3>
+                <Loading mini />
             ) : (
                 <div>
                     <UpcomingLaunchHeader>

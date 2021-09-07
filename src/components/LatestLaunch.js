@@ -5,6 +5,7 @@ import styled from "styled-components";
 import colors from "../styles/colors";
 import * as T from "../styles/type";
 import * as B from "../styles/buttons";
+import Loading from "./Loading";
 
 const LatestLaunch = () => {
     const [launchData, setLaunchData] = useState(null);
@@ -29,7 +30,7 @@ const LatestLaunch = () => {
     return (
         <LatestLaunchContainer>
             {loading ? (
-                <h3>Loading...</h3>
+                <Loading mini />
             ) : (
                 <div>
                     <LatestLaunchHeader
@@ -88,18 +89,31 @@ const LatestLaunch = () => {
                             >
                                 Launch Details
                             </T.launchBlockTitle>
-                            {launchData.rocket && (
-                                <LaunchDetail
-                                    type="rocket"
-                                    data={launchData.rocket}
-                                ></LaunchDetail>
-                            )}
-                            {launchData.ships && (
-                                <LaunchDetail
-                                    type="ship"
-                                    data={launchData.ships[0]}
-                                ></LaunchDetail>
-                            )}
+                            <div
+                                style={{
+                                    display: "grid",
+                                    gridTemplateColumns: "1fr 1fr 1fr",
+                                }}
+                            >
+                                {launchData.rocket && (
+                                    <LaunchDetail
+                                        type="rocket"
+                                        data={launchData.rocket}
+                                    ></LaunchDetail>
+                                )}
+                                {launchData.ships && (
+                                    <LaunchDetail
+                                        type="ship"
+                                        data={launchData.ships[0]}
+                                    ></LaunchDetail>
+                                )}
+                                {/* {launchData.payloads && (
+                                    <LaunchDetail
+                                        type="payloads"
+                                        data={launchData.payloads[0]}
+                                    ></LaunchDetail>
+                                )} */}
+                            </div>
                         </LatestLaunchDetails>
                     </LatestLaunchBody>
                 </div>

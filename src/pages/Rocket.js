@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import styled from "styled-components";
+import Loading from "../components/Loading";
 import { OuterWrapper } from "../styles/layout";
 import { Button } from "../styles/buttons";
+import colors from "../styles/colors";
 
 const Rocket = () => {
     let params = useParams();
@@ -27,15 +29,26 @@ const Rocket = () => {
     return (
         <div>
             {loading ? (
-                <p>Loading data...</p>
+                <Loading />
             ) : (
                 <>
                     <RocketHeader>
                         <RocketHeaderGradient />
-                        <RocketHeaderBackground
-                            src={rocketData.flickr_images[4]}
-                            alt={`${rocketData.name}`}
-                        />
+                        {rocketData.flickr_images.length > 1 ? (
+                            <RocketHeaderImageBackground
+                                src={
+                                    rocketData.flickr_images[
+                                        Math.floor(
+                                            Math.random() *
+                                                rocketData.flickr_images.length
+                                        )
+                                    ]
+                                }
+                                alt={`${rocketData.name}`}
+                            />
+                        ) : (
+                            <RocketHeaderColorBackground />
+                        )}
 
                         <RocketName>
                             <h1>{rocketData.name}</h1>
@@ -71,7 +84,7 @@ export const RocketHeader = styled.div`
     position: relative;
 `;
 
-export const RocketHeaderBackground = styled.img`
+export const RocketHeaderImageBackground = styled.img`
     position: absolute;
     top: 0;
     left: 0;
@@ -79,6 +92,15 @@ export const RocketHeaderBackground = styled.img`
     height: 100%;
     object-fit: cover;
     object-position: top;
+`;
+
+export const RocketHeaderColorBackground = styled.div`
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: ${colors.shark};
 `;
 
 export const RocketHeaderGradient = styled.div`
