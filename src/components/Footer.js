@@ -30,7 +30,7 @@ const Footer = () => {
 export default Footer;
 
 export const FooterContainer = styled.footer`
-    background: linear-gradient(90deg, #13151a 0%, rgba(39, 43, 51, 0.79) 100%);
+    background: #272b33;
     border-top: 4px solid #e3e3e3;
     color: ${colors.light};
     padding: 28px 0;

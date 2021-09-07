@@ -392,12 +392,13 @@ body {
 
 body {
   font-family: 'Inter Regular', Helvetica, sans-serif;
-  background-color: #FAFAF7;
+  background-color: #272B33;
   color: #272B33;
 }
 
 main {
   background-color: #fafaf9;
+  height: 100%;
 }
 
 
