@@ -33,14 +33,7 @@ const Rocket = () => {
                     <RocketHeader>
                         <RocketHeaderGradient />
                         <RocketHeaderBackground
-                            src={
-                                rocketData.flickr_images[
-                                    Math.floor(
-                                        Math.random() *
-                                            rocketData.flickr_images.length
-                                    )
-                                ]
-                            }
+                            src={rocketData.flickr_images[4]}
                             alt={`${rocketData.name}`}
                         />
 
@@ -112,9 +105,8 @@ export const RocketName = styled.div`
         margin: 0;
         font-size: 96px;
         color: #fff;
-        font-family: "Inter Bold";
+        font-family: "Inter Light";
         text-transform: uppercase;
-        letter-spacing: 3px;
     }
 `;
 

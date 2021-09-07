@@ -74,6 +74,9 @@ export default UpcomingLaunch;
 
 export const UpcomingLaunchContainer = styled.div`
     grid-column: 7 / span 6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     align-self: start;
     background: linear-gradient(139.98deg, #272b33 33.85%, #616b80 100%);
     box-shadow: 0px 0px 20px 8px rgba(0, 0, 0, 0.2);
