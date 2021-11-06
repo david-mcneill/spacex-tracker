@@ -30,7 +30,7 @@ const UpcomingLaunch = () => {
             {loading ? (
                 <Loading mini />
             ) : (
-                <div>
+                <div style={{ width: "100%", height: "100%" }}>
                     <UpcomingLaunchHeader>
                         <UpcomingLaunchTitle>
                             <T.launchBlockTitle>

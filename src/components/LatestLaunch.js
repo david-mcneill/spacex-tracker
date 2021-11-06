@@ -32,7 +32,7 @@ const LatestLaunch = () => {
             {loading ? (
                 <Loading mini />
             ) : (
-                <div>
+                <div style={{ width: "100%", height: "100%" }}>
                     <LatestLaunchHeader
                         style={{
                             backgroundImage: `linear-gradient(180deg, rgba(0, 0, 0, 0.75) 9.9%, rgba(21, 23, 28, 0) 48.44%, rgba(39, 43, 51, 0.75) 88.54%), url(${launchData.links.flickr.original[0]})`,
