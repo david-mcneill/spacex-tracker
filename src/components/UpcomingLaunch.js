@@ -59,10 +59,14 @@ const UpcomingLaunch = () => {
                     </UpcomingLaunchHeader>
 
                     <UpcomingLaunchBody>
-                        {launchData.details && (
+                        {launchData.details ? (
                             <T.launchDescription>
                                 {launchData.details}
                             </T.launchDescription>
+                        ) : (
+                            <p style={{ textAlign: "center" }}>
+                                Launch details to be confirmed
+                            </p>
                         )}
                     </UpcomingLaunchBody>
                 </div>

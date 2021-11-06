@@ -113,7 +113,7 @@ export const ShipName = styled.div`
 
     h1 {
         margin: 0;
-        font-size: 72px;
+        font-size: 60px;
         color: #fff;
         font-family: "Inter Light";
         text-transform: uppercase;

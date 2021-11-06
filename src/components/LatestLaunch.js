@@ -107,12 +107,6 @@ const LatestLaunch = () => {
                                         data={launchData.ships[0]}
                                     ></LaunchDetail>
                                 )}
-                                {/* {launchData.payloads && (
-                                    <LaunchDetail
-                                        type="payloads"
-                                        data={launchData.payloads[0]}
-                                    ></LaunchDetail>
-                                )} */}
                             </div>
                         </LatestLaunchDetails>
                     </LatestLaunchBody>

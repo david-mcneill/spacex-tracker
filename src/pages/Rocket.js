@@ -66,7 +66,7 @@ const Rocket = () => {
                                     target="_blank"
                                     rel="nofollower"
                                 >
-                                    Read More
+                                    Wikipedia
                                 </Button>
                             </div>
                         </RocketInfo>
