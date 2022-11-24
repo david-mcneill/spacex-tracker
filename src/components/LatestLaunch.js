@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import LaunchDetail from "./LaunchDetail";
+// import LaunchDetail from "./LaunchDetail";
 import { format } from "date-fns";
 import styled from "styled-components";
 import colors from "../styles/colors";
@@ -80,7 +80,7 @@ const LatestLaunch = () => {
                                 Watch the launch
                             </B.Button>
                         </div>
-                        <LatestLaunchDetails>
+                        {/* <LatestLaunchDetails>
                             <T.launchBlockTitle
                                 style={{
                                     fontSize: 18,
@@ -108,7 +108,7 @@ const LatestLaunch = () => {
                                     ></LaunchDetail>
                                 )}
                             </div>
-                        </LatestLaunchDetails>
+                        </LatestLaunchDetails> */}
                     </LatestLaunchBody>
                 </div>
             )}
